@@ -14,7 +14,7 @@ Also temperature has not been implemented yet, as I don't have a light that uses
 The remote sends a 32bit data packet with a final low end-bit, defined by long/short low pulses separated by 750us high pulses.
 
 Here's a signal corresponding to a brightness command of 25% sent to channel 1, group A. (Signal visualised by [https://test.sui.li/oszi/](https://test.sui.li/oszi/))
-![signal](https://github.com/BrittonPlewes/GodoxRemote/blob/master/image.png "RC-45 signal")
+![signal](https://github.com/BrittonPlewes/GodoxRemote/blob/master/docs/image.png "RC-45 signal")
 
 | GRP     | CHAN    |  value           | cmd | temp        |  checksum        |
 |---      |---      |---               |---  |---          |---               |
