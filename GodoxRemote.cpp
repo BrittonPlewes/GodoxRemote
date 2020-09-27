@@ -1,17 +1,22 @@
 /*
+This is a simple library that uses a 433mhz RF antenna to "spoof" an RC-A5 remote, used by most consumer Godox camera lights.
 
-   FUNCTION STRUCTURE
+LIMITATIONS
+Currently this only works on channels 1/2, as the complete signal setup hasn't been decoded.
+Also temperature has not been implemented yet, as I don't have a light that uses it to test (yet).
 
-    { GRP }  { CHAN } {    value     } {cmd} {  temp   }  {   checksum   }
-   [0,0,0,1, 0,0,0,0, 0,0,0,1, 1,0,0,1, 0,0, 0,0,1,1,0,0, 1,0,1,0, 0,1,0,1]  - set 1A brightness to 25
-       A         1           25         val     4400k           ?????
+
+
+SIGNAL STRUCTURE    
+
+ { GRP }  { CHAN } {    value     } {cmd} {  temp   }  {   checksum   }
+[0,0,0,1, 0,0,0,0, 0,0,0,1, 1,0,0,1, 0,0, 0,0,1,1,0,0, 1,0,1,0, 0,1,0,1]  - set 1A brightness to 25
+   A         1           25         val     4400k           ?????
 
 I have *no* idea what the checksum corresponds to, it's not a simple checksum/crc8, and doesn't seem to be affected by cmd/temp...
 These values were extracted manually, and stored in a lookup table in GodoxRemote_codes.h
 
 */
-
-
 
 
 
