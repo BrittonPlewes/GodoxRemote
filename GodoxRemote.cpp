@@ -81,7 +81,7 @@ void GodoxRemote::setRepeatNum( int n ){
 void GodoxRemote::setBrightness( int val ){
     _val = val;
 
-    _setCmd( 0, godox_cmds[2], val, godox_lightCodes[_channel][_group][_val-25] );
+    _setCmd( 0, godox_cmds[2], val, godox_lightCodes[_channel][_group][_val-10] );
 
     // send the command
     _runCmd(0, _repeatNum);
